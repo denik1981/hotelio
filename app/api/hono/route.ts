@@ -3,8 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 const HONO_SERVER_URL = process.env.HONO_SERVER_URL;
 
 // Validate that we have a server URL in production
-if (!HONO_SERVER_URL && process.env.NODE_ENV === 'production') {
-  throw new Error('HONO_SERVER_URL environment variable is required in production');
+if (!HONO_SERVER_URL && process.env.NODE_ENV === "production") {
+  throw new Error(
+    "HONO_SERVER_URL environment variable is required in production"
+  );
 }
 
 // Fallback only for development
